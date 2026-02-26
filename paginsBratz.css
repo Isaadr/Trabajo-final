@@ -1,10 +1,3 @@
-body {
-    background: radial-gradient(var(--doll1), var(--doll2), var(--doll3));
-    
-    
-    
-}
-
 h1 {
     position: absolute;
     font-size: 500%;
@@ -24,16 +17,4 @@ a {
     font-family: "Frijole", system-ui;
     top: 50%;
     left: 33%;
-}
-
-:root {
-    --doll1: #c706af;
-    --doll2: #c413f0;
-    --doll3: #e30985;
-
-    --back1: #c357ff;
-    --back2: #6622e0;
-    --back3: #304af2;
-
-
 }
