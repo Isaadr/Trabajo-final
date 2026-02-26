@@ -7,24 +7,64 @@ body {
 
 h1 {
     position: absolute;
-    font-size: 500%;
+    font-size: 1000%;
     font-family: "UnifrakturMaguntia";
-    color: rgb(99, 164, 91);
+    color: azure;
     top: 20%;
     left: 25%;
     
     
 }
 
+h2 {
+    position: absolute;
+    font-size: 1000%;
+    font-family: "UnifrakturMaguntia";
+    transform: scaleY(-1);
+    color: rgb(132, 45, 172);
+    top: 30%;
+    left: 25%;
+    transition-duration: 5s;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+h2:hover {
+   
+}
+
 a {
     position: absolute;
     font-size: 300%;
     background-color: #8319e0;
+    text-decoration: none;
     color: aliceblue;
     font-family: "Frijole", system-ui;
-    top: 50%;
-    left: 33%;
+    top: 55%;
+    left: 50%;
 }
+a:visited, a:active {
+    color:rgb(176, 206, 232);
+
+}
+.portada {
+    position: absolute;
+    width: 22%;
+    height: auto;
+    border: blueviolet;
+    border-radius: 50%;
+    left: 8%;
+}
+.portada2 {
+    position: absolute;
+    width: 15%;
+    height: 30%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    object-fit: cover;
+    bottom: 0%;
+    left: 50%;  
+    
+}
+
+
 
 :root {
     --doll1: #c706af;

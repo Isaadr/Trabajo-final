@@ -1,11 +1,32 @@
-h1 {
-    position: absolute;
-    font-size: 500%;
-    font-family: "UnifrakturMaguntia";
-    color: rgb(99, 164, 91);
-    top: 20%;
-    left: 25%;
+body {
+    background: radial-gradient(var(--doll4), var(--doll4), var(--doll6));
     
+    
+}
+
+:root {
+    --doll4: #8A66FF;
+    --doll5: #633C96;
+    --doll6: #972CE6;
+}
+
+
+h1 {
+
+    position: absolute;
+    font-size: 1000%;
+    font-family: "UnifrakturMaguntia";
+    color: rgb(236, 82, 166);
+    top: 20%;
+    left: 30%;
+    
+    
+}
+
+h1:hover {
+    color: #A11346;
+    
+   
     
 }
 
@@ -15,6 +36,11 @@ a {
     background-color: #8319e0;
     color: aliceblue;
     font-family: "Frijole", system-ui;
+    text-decoration: none;
     top: 50%;
     left: 33%;
+}
+
+a:visited, a:active {
+    color: aliceblue;
 }
