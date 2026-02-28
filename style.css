@@ -4,42 +4,56 @@ body {
     
     
 }
-
-h1 {
+audio {
     position: absolute;
-    font-size: 1000%;
-    font-family: "UnifrakturMaguntia";
+    width: 300px;
+    border-radius: 30px;
+    accent-color: red;
+    background-color: #304af2;
+    color: #c357ff;
+    left: 40vw;
+}
+ 
+h1 {
+
+    position: absolute;
+    font-size: 170px;
+    font-family: "Melt-Swashes.ttf";
     color: azure;
-    top: 20%;
-    left: 25%;
+    top: 20vh;
+    left: 25vw;
     
     
+}
+h1:hover {
+   color: rgb(132, 45, 172); 
 }
 
 h2 {
     position: absolute;
-    font-size: 1000%;
+    font-size: 120px;
     font-family: "UnifrakturMaguntia";
-    transform: scaleY(-1);
+    transform: scaleY(1);
+    line-height: 200px;
     color: rgb(132, 45, 172);
-    top: 30%;
-    left: 25%;
+    top: 36vh;
+    left: 25vw;
     transition-duration: 5s;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 h2:hover {
-   
+   color: azure;
 }
 
 a {
     position: absolute;
-    font-size: 300%;
+    font-size: 50px;
     background-color: #8319e0;
     text-decoration: none;
     color: aliceblue;
     font-family: "Frijole", system-ui;
-    top: 55%;
-    left: 50%;
+    top: 200vh;
+    left: 50vw;
 }
 a:visited, a:active {
     color:rgb(176, 206, 232);
@@ -47,20 +61,68 @@ a:visited, a:active {
 }
 .portada {
     position: absolute;
-    width: 22%;
+    width: 300px;
     height: auto;
     border: blueviolet;
     border-radius: 50%;
-    left: 8%;
+    left: 20px;
+    top: 200px;
 }
+.decor {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border: blueviolet;
+    right: 100px;
+    top: 300px;
+    mix-blend-mode: multiply;
+    transform: scaleX(100vh);
+    
+}
+.decor:hover {
+    transform: scaleX(100vh);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
 .portada2 {
     position: absolute;
-    width: 15%;
-    height: 30%;
+    width:200px;
+    height: 200px;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
     object-fit: cover;
-    bottom: 0%;
-    left: 50%;  
+    top: 0px;
+    left: 0vw;  
+    
+}
+.portada3 {
+    position: absolute;
+    width:100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    object-fit: cover;
+    top: 90px;
+    left: 12vw;  
+    
+}
+.portada4 {
+    position: absolute;
+    width:100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    object-fit: cover;
+    top: 90px;
+    right: 12vw;  
+    
+}
+.portada5 {
+    position: absolute;
+    width:200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    object-fit: cover;
+    top: 0px;
+    right: 0vw;  
     
 }
 

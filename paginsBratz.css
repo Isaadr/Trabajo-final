@@ -17,8 +17,8 @@ h1 {
     font-size: 1000%;
     font-family: "UnifrakturMaguntia";
     color: rgb(236, 82, 166);
-    top: 20%;
-    left: 30%;
+    top: 20px;
+    left: 30px;
     
     
 }
@@ -37,8 +37,8 @@ a {
     color: aliceblue;
     font-family: "Frijole", system-ui;
     text-decoration: none;
-    top: 50%;
-    left: 33%;
+    top: 50px;
+    left: 33px;
 }
 
 a:visited, a:active {
