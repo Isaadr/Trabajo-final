@@ -1,228 +1,321 @@
 body {
     background: radial-gradient(var(--doll1), var(--doll2), var(--doll3));
-    
-    
+    padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
     
 }
+
+.titulolove {
+    font-size: clamp(2rem, 7vw, 100px);
+    
+    color: rgb(132, 45, 172);
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* AUDIO */
 audio {
-    position: absolute;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     width: 300px;
     border-radius: 30px;
     accent-color: red;
-    background-color: #304af2;
-    left: 40vw;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgb(98, 7, 255);
 }
- 
+
+@media (max-width: 768px) {
+    audio {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 250px;
+    }
+}
+
+@keyframes parpadeo {
+    0%, 100% { color: rgb(137, 5, 185); opacity: 1; }
+    50% { color: #f958f9; opacity: 0.5; }
+}
+
+/* TÍTULOS H1 */
 h1 {
-
-    position: absolute;
-    font-size: 170px;
-    font-family: "Melt-Swashes.ttf";
+    font-size: clamp(2rem, 10vw, 170px);
     color: azure;
-    top: 20vh;
-    left: 25vw;
-    
-    
-}
-h1:hover {
-   color: rgb(132, 45, 172); 
+    text-align: center;
+    margin: 20px 0;
+    animation: parpadeo 4s ease-in-out infinite;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+
+
+@keyframes movimientoBratz {
+    0% { transform: translateX(-60px); }
+    50% { transform: translateX(60px); }
+    100% { transform: translateX(-60px); }
 }
 
+h2 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-family: "UnifrakturMaguntia", sans-serif;
+    color: rgb(132, 45, 172);
+    text-align: center;
+    margin: 20px 0;
+    
+
+}
+
+h2:hover {
+    color: azure;
+    animation: movimientoBratz 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    cursor: pointer;
+}
+
+/* ENLACE */
 a {
-    position: absolute;
-    font-size: 50px;
+    display: block;
+    font-size: clamp(1rem, 4vw, 50px);
     background-color: #8319e0;
     text-decoration: none;
     color: aliceblue;
     font-family: "Frijole", system-ui;
-    top: 200vh;
-    left: 50vw;
+    padding: 15px 0px;
+    border-radius: 10px;
+    margin: 400px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+    bottom: 600px;
 }
-a:visited, a:active {
-    color:rgb(176, 206, 232);
 
+a:hover {
+    background-color: rgb(132, 45, 172);
+    transform: scale(1.05);
 }
+
+a:visited, a:active {
+    color: rgb(176, 206, 232);
+}
+
+.zoomTexto{
+    transition: transform 0.3s ease;
+}
+
+.zoomTexto:hover{
+    transform: scale(1.15);
+}
+
 h3 {
-    position: absolute;
+    color: rgb(100, 3, 135);
+    font-family: monospace;
     font-size: 50px;
-    font-family: "Lobster";
-    color: #e30985;
-    top: 100vh;
-    left: 10vw;
-    display: -webkit-box;
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-    z-index: 1;
+    text-align: center;
+    animation: parpadeo 4s ease-in-out infinite;
 }
-.portada {
-    position: absolute;
-    width: 400px;
-    height: auto;
-    border: blueviolet;
-    border-radius: 50%;
-    left: 50px;
-    top: 200px;
+
+
+.boton {
+    display: grid;
+    place-items: center;
+    min-height: -300vh;
+    width: 100%;
+    cursor: pointer;
 }
-.banner {
-    position: absolute;
-    width: 500px;
-    height: auto;
-    border: blueviolet;
-    top: 80vh;
-    left: 10vw;
+
+
+.boton2 {
+    display: grid;
+    place-items: center;
+    min-height: -300vh;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
-.banner2 {
-    position: absolute;
-    width: 300px;
-    height: auto;
-    border: blueviolet;
-    top: 95vh;
-    left: 10vw;
-    mix-blend-mode: multiply;
-    z-index: 1;
+
+.boton2:hover {
+    transform: scale(1.1);
 }
+
 .decor {
-    position: absolute;
-    width: 200px;
-    height: auto;
-    border: blueviolet;
-    right: 100px;
-    top: 300px;
-    mix-blend-mode: multiply;
-    transform: scaleX(100vh);
-    
+    display: block;           /* hace que margin auto funcione */
+    margin: 200px auto;        /* centra horizontalmente y agrega margen superior/inferior */
+    width: 400px;         /* ancho máximo personalizado */
+    width: 100%;              /* mantiene responsividad */
+    height: auto; 
+     transition: transform 0.4s ease;           /* mantiene proporción */
 }
 .decor:hover {
-    transform: scaleX(100vh);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(2.1); /* 10% más grande */
 }
 
-.footer {
-  text-align: center;
-  padding: 20px 0;
-}
-.love {
-    position: absolute;
-    height: 600px;
-    width: 800px;
-    background: radial-gradient(var(--love1), var(--love2), var(--love3));
-    border-radius: 10%;
-    top: 100vh;
-    left: 10vw;
-}
-.horoscopo {
-    position: absolute;
-    height: 600px;
-    width: 800px;
-    top: 100vh;
-    left: 10vw;
-    background: linear-gradient(var(--horoscopo1), var(--horoscopo2), var(--horoscopo3));
-    border-radius: 10% 40%;
-    top: 100vh;
-    left: 60vw;
 
+#texto {
+    font-size: 28px;
+    font-family: Georgia, serif;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    cursor: pointer;
+    
 }
-.banner3 {
-    position: absolute;
-    width: 300px;
+
+.decor2 {
+    display: block;
+    margin: 200px auto;
     height: auto;
-    top: 89vh;
-    left: 85vw;
-    z-index: 1;
-    
+    transition: transform 0.4s ease;
 }
-.banner4 {
-   position: absolute;
-    width: 300px;
-    height: auto;
-    top: 83vh;
-    left: 76vw; 
-    mix-blend-mode: multiply;
-    
-}
-.love {
-    position: absolute;
-    height: 600px;
-    width: 800px;
-    background: radial-gradient(var(--love1), var(--love2), var(--love3));
-    border-radius: 10%;
-    top: 100vh;
-    left: 10vw;
-}
-.horoscopo {
-    position: absolute;
-    width:200px;
-    height: 200px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
-    object-fit: cover;
-    top: 0px;
-    right: 0vw;  
-    
-}
-.love {
-    position: absolute;
-    height: 600px;
-    width: 800px;
-    background: radial-gradient(var(--love1), var(--love2), var(--love3));
-    border-radius: 10%;
-    top: 100vh;
-    left: 10vw;
-}
-.horoscopo {
-    position: absolute;
-    height: 600px;
-    width: 800px;
-    top: 100vh;
-    left: 10vw;
-    background: linear-gradient(var(--horoscopo1), var(--horoscopo2), var(--horoscopo3));
-    border-radius: 10% 40%;
-    top: 100vh;
-    left: 60vw;
-
-}
-.banner3 {
-    position: absolute;
-    width: 300px;
-    height: auto;
-    top: 89vh;
-    left: 85vw;
-    z-index: 1;
-    
-}
-.banner4 {
-   position: absolute;
-    width: 300px;
-    height: auto;
-    top: 83vh;
-    left: 76vw; 
-    mix-blend-mode: multiply;
-    
+.decor2:hover {
+    transform: scale(1.1); /* 10% más grande */
 }
 
+h5 {
+    text-align: center;
 
+}
+.recuadroAnimado {
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 3px solid white;
+    display: inline-block;
+    margin-top: 100px; 
+    
+    
+
+    /* Animación infinita de cambio de color */
+    animation: cambiarColor 5s linear infinite;
+}
+@keyframes cambiarColor {
+    0%   { background-color: #FFB6F4; border-color: #FFE6F7; }
+    25%  { background-color: #F4FFB6; border-color: #B6FFE6; }
+    50%  { background-color: #B6F4FF; border-color: #E6B6FF; }
+    75%  { background-color: #FFB6B6; border-color: #FFE6B6; }
+    100% { background-color: #FFB6F4; border-color: #FFE6F7; }
+}
+
+.moodanimado{
+    font-size: 100px;
+    animation: cambiarFuenteColor 3s linear infinite; /* animación infinita de 6 segundos */
+}
+
+/* Animación de fuente y color */
+@keyframes cambiarFuenteColor {
+    0% {
+        font-family: 'Arial', sans-serif;
+        color: #90d3ff; /* rojo anaranjado */
+    }
+    25% {
+        font-family: 'Georgia', serif;
+        color: #ff33dd; /* verde */
+    }
+    50% {
+        font-family: 'Courier New', monospace;
+        color: #af00ce; /* azul */
+    }
+    75% {
+        font-family: 'Impact', sans-serif;
+        color: #a4005d; /* rosa fucsia */
+    }
+    100% {
+        font-family: 'Arial', sans-serif;
+        color: #9260ff; /* vuelve al inicio */
+    }
+}
+
+.boton3 {
+     place-items: left;
+    cursor: pointer;
+
+} 
+
+
+
+.boton6 {
+    cursor: pointer;
+}
+
+.boton5 {
+    cursor: pointer;
+    
+}
+
+.boton7 {
+    cursor: pointer;
+}
+
+.boton8 {
+    cursor: pointer;
+}
+
+.boton9 {
+    cursor: pointer;
+}
+
+
+/* IMÁGENES */
+img {
+    max-width: 100%;
+    height: auto;
+    /* display: block; */
+}
+
+
+/* VARIABLES */
 :root {
     --doll1: #c706af;
     --doll2: #c413f0;
     --doll3: #e30985;
-
     --back1: #c357ff;
     --back2: #6622e0;
     --back3: #304af2;
+}
 
-    --love1: #ea9dae;
-    --love2: #fbde9c;
-    --love3: #c74e51;
+/* MEDIA QUERIES - TABLET */
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+    
+    h1 {
+        font-size: clamp(2rem, 12vw, 170px);
+        margin: 40px 0;
+    }
+    
+    .portada {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .decor {
+        width: 150px;
+    }
+}
 
-    --horoscopo1: #417c9c;
-    --horoscopo2: #76a0b3;
-    --horoscopo3: #d8ccc5;
-
-
+/* MEDIA QUERIES - DESKTOP */
+@media (min-width: 1024px) {
+    body {
+        padding: 60px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-size: 170px;
+        margin: 60px 0 20px;
+    }
+    
+    h2 {
+        font-size: 120px;
+        margin: 0 0 40px;
+    }
+    
+    audio {
+        width: 300px;
+        max-width: none;
+    }
+    
+    .portada {
+        width: 300px;
+        height: auto;
+    }
 }

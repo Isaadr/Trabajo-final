@@ -14,11 +14,11 @@ body {
 h1 {
 
     position: absolute;
-    font-size: 1000%;
+    font-size: 200px;
     font-family: "UnifrakturMaguntia";
     color: rgb(236, 82, 166);
-    top: 20px;
-    left: 30px;
+    top: 20vh;
+    left: 20vw;
     
     
 }
@@ -37,6 +37,7 @@ a {
     color: aliceblue;
     font-family: "Frijole", system-ui;
     text-decoration: none;
+    border-radius: 10%;
     top: 50px;
     left: 33px;
 }
