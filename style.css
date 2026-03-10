@@ -147,12 +147,46 @@ h3 {
     mix-blend-mode: multiply;
     
 }
-
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+.love {
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    background: radial-gradient(var(--love1), var(--love2), var(--love3));
+    border-radius: 10%;
+    top: 100vh;
+    left: 10vw;
 }
+.horoscopo {
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    top: 100vh;
+    left: 10vw;
+    background: linear-gradient(var(--horoscopo1), var(--horoscopo2), var(--horoscopo3));
+    border-radius: 10% 40%;
+    top: 100vh;
+    left: 60vw;
+
+}
+.banner3 {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 89vh;
+    left: 85vw;
+    z-index: 1;
+    
+}
+.banner4 {
+   position: absolute;
+    width: 300px;
+    height: auto;
+    top: 83vh;
+    left: 76vw; 
+    mix-blend-mode: multiply;
+    
+}
+
 
 :root {
     --doll1: #c706af;
