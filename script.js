@@ -66,6 +66,18 @@ document.getElementById('miInput').addEventListener('keypress', function(event) 
     }
     });
 
+function toggleMusic(){
+let audio = document.getElementById("musica");
+let icon = document.getElementById("icon");
+
+if(audio.paused){
+audio.play();
+icon.innerHTML = "⏸";
+}else{
+audio.pause();
+icon.innerHTML = "▶";
+}
+}
 
 
 
