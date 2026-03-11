@@ -65,19 +65,32 @@ document.getElementById('miInput').addEventListener('keypress', function(event) 
         mostrarTexto();
     }
     });
+let currentAudio = null;
 
-function toggleMusic(){
-let audio = document.getElementById("musica");
-let icon = document.getElementById("icon");
+function toggleMusic(audioId, iconId) {
+    const audio = document.getElementById(audioId);
+    const icon = document.getElementById(iconId);
 
-if(audio.paused){
-audio.play();
-icon.innerHTML = "⏸";
-}else{
-audio.pause();
-icon.innerHTML = "▶";
+    // Si hay otra canción sonando, la pausamos
+    if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+
+        // Resetear icono del anterior botón (si existe)
+        const prevIcon = currentAudio._icon;
+        if (prevIcon) prevIcon.textContent = "▶";
+    }
+
+    // Si esta canción está pausada: reproducir
+    if (audio.paused) {
+        audio.play();
+        icon.textContent = "⏸";
+        currentAudio = audio;
+        audio._icon = icon;
+    } else {
+        // Si ya estaba sonando: pausar
+        audio.pause();
+        icon.textContent = "▶";
+    }
 }
-}
-
-
 
