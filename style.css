@@ -182,6 +182,22 @@ h5 {
     
     
 
+.emoji-drop {
+    position: fixed;
+    top: -50px;
+    font-size: 2.2rem;
+    animation: fall 2s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
     /* Animación infinita de cambio de color */
     animation: cambiarColor 5s linear infinite;
 }

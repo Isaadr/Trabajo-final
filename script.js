@@ -94,3 +94,28 @@ function toggleMusic(audioId, iconId) {
     }
 }
 
+
+function emojiRain() {
+    const emojis = ["🎉", "✨", "💖", "🎶", "⭐", "💫"];
+    const duration = 3000; // duración total de la lluvia (ms)
+
+    const interval = setInterval(() => {
+        const emoji = document.createElement("div");
+        emoji.classList.add("emoji-drop");
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+        // posición horizontal aleatoria
+        emoji.style.left = Math.random() * 100 + "vw";
+
+        document.body.appendChild(emoji);
+
+        // eliminar después de caer
+        setTimeout(() => emoji.remove(), 2000);
+    }, 150);
+
+    // detener la lluvia después de X tiempo
+    setTimeout(() => clearInterval(interval), duration);
+}
+
+
+
